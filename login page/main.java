@@ -1,3 +1,4 @@
+import java.awt.*;
 import javax.swing.*;
 
 class main{
@@ -6,10 +7,13 @@ class main{
     frm.setVisible(true);
     frm.setSize(700,500);
     frm.setLayout(null);
+    frm.setBackground(Color.RED);
     frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
 
     JLabel label1=new JLabel("Welcome to Ethical Hacking Lab");
     label1.setVisible(true);
+    label1.setForeground(Color.red);
     label1.setBounds(250, 50, 200, 20);
     frm.add(label1);
 
@@ -20,6 +24,7 @@ class main{
 
     JTextField text1=new JTextField();
     text1.setVisible(true);
+    text1.setForeground(Color.blue);
     text1.setBounds(320, 150, 100, 20);
     frm.add(text1);
 
@@ -30,11 +35,14 @@ class main{
 
     JTextField text2=new JTextField();
     text2.setVisible(true);
+    text2.setForeground(Color.blue);
     text2.setBounds(320, 200, 100, 20);
     frm.add(text2);
 
     JButton btn=new JButton("Login");
     btn.setVisible(true);
+    btn.setBackground(Color.blue);
+    btn.setForeground(Color.YELLOW);
     btn.setBounds(270,250,100,20);
     frm.add(btn);
 
@@ -44,14 +52,15 @@ class main{
     frm.add(label4);
 
     btn.addActionListener(e->{
-      
       String user=text1.getText();
       String password=text2.getText();
 
       if(user.equals("admin")&& password.equals("admin")){
+        label4.setForeground(Color.blue);
         label4.setText("Congratulations, Login Successfully!");
       }
       else{
+        label4.setForeground(Color.red);
         label4.setText("Sorry, Try Again!");
       }
     });
