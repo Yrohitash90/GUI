@@ -1,20 +1,23 @@
 import java.awt.*;
+import java.io.*;
 import javax.swing.*;
 
 class main{
-  public static void main(String []args){
-    JFrame frm=new JFrame("Login");
+  public static void main(String []args) throws IOException{
+    JFrame frm=new JFrame("Hacker's Dashboard");
     frm.setVisible(true);
     frm.setSize(700,500);
     frm.setLayout(null);
-    frm.setBackground(Color.RED);
+    frm.getContentPane().setBackground(Color.CYAN);
     frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
 
     JLabel label1=new JLabel("Welcome to Ethical Hacking Lab");
     label1.setVisible(true);
     label1.setForeground(Color.red);
-    label1.setBounds(250, 50, 200, 20);
+    Font f1=new Font("calibri",Font.BOLD,20);
+    label1.setFont(f1);
+    label1.setBounds(200, 50, 300, 30);
     frm.add(label1);
 
     JLabel label2=new JLabel("Username");
@@ -25,6 +28,8 @@ class main{
     JTextField text1=new JTextField();
     text1.setVisible(true);
     text1.setForeground(Color.blue);
+    Font f2=new Font("calibri",Font.PLAIN,15);
+    text1.setFont(f2);
     text1.setBounds(320, 150, 100, 20);
     frm.add(text1);
 
@@ -50,6 +55,7 @@ class main{
     label4.setVisible(true);
     label4.setBounds(220, 300, 250, 40);
     frm.add(label4);
+
 
     btn.addActionListener(e->{
       String user=text1.getText();
